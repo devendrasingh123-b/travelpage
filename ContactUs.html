@@ -30,6 +30,16 @@ justify-content: space-between;
 text-align: center;
 
 }
+
+
+
+#contaner{
+
+margin: 40px;
+padding: 20px;
+background-color: yellow;
+
+}
 </style>
 
 </head>
@@ -56,5 +66,67 @@ text-align: center;
 
 </div>
 
+
+
+<div id="form" >
+
+    <form action="" >
+
+<fieldset>
+
+<legend>contact us</legend>
+
+
+
+<label for="name">name</label>
+<input type="text" placeholder="name" id="name" required>
+
+<label for="email">email</label>
+<input type="email" placeholder="email" id="email" required>
+
+<input type="text" placeholder="phoneNo." required>
+
+<label for="i">Extra Area</label>
+<input type="text" placeholder="axtra aria" required>
+
+
+<button id="f">Submit </button>
+</fieldset>
+
+
+    </form>
+
+</div>
+
+
+<div id="contaner"></div>
+
 </html>
 </body>
+
+<script>
+
+
+
+let button=document.getElementById("f")
+
+button.addEventListener("click", fun)
+
+function fun(event){
+
+
+let div=document.getElementById("contaner")
+
+let input=document.createElement("input")
+input.type="text"
+
+let h4=document.createElement("h4")
+h4.innerText="Feedback"
+
+div.append(h4,input)
+event.preventDefault()
+}
+
+
+
+</script>
